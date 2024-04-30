@@ -24,7 +24,7 @@ Added user management-related templates, login, logout & register views to the a
 ## Part 3: Node.js Mongo DB dockerized server
 ### Communication with the database
 Wrote back-end services in an Express app and containerized it with Docker.
--
+
 ### Wrote and tested the following endpoints:
  
  /fetchReviews/dealer/29
