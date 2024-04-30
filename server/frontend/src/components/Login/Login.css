@@ -1,3 +1,5 @@
+
+
 .navcontainer{
   display: flex;
   flex: 1;
@@ -71,7 +73,7 @@
   align-self:flex-end;
 }
 
-.login_panel {
+/* .login_panel {
   display: flex;
   flex-direction: column;
   margin:auto;
@@ -83,4 +85,56 @@
   align-items: center;
   vertical-align: middle;
   
+} */
+
+.login_panel {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 20px;
+    color: #000000; /* Black text color */
 }
+
+.login_panel h2 {
+    color: #000000; /* Black text color */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.login_panel input[type="text"],
+.login_panel input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+}
+
+.login_panel input[type="submit"],
+.login_panel input[type="button"] {
+    width: 45%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.login_panel input[type="submit"]:hover,
+.login_panel input[type="button"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.login_panel a {
+    color: #000000; /* Black text color */
+    text-decoration: none;
+}
+
+.login_panel a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Login.css */
