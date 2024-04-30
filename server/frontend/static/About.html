@@ -1,70 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Best Cars Dealership</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-</head>
-<body class="body-about">
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Best Cars Dealership</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <style>
+            
+
+            .card {
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                background-color: #fff;
+            }
+
+            /* .card img {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                object-fit: cover;
+                height: 300px;
+            } */
+            .card img {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                object-fit: cover;
+                width: 100%; /* Ensure the image width fills the container */
+                height: 100%; /* Ensure the image height fills the container */
+            }
+            .card-body {
+                padding: 20px;
+            }
+
+            .card-title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .card-text {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            
+        </style>
+    </head>
+    <body class="body-about">
+        <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                <h2 style="padding-right: 5%;">Dealerships</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+                            </li>
+                        </ul>
+                </div>
+                </div>
+            </nav>
+    
+        <div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/static/josefine.jpg" alt="Person1">
+                        <div class="card-body">
+                            <h5 class="card-title">Josefine Andersson</h5>
+                            <p class="card-text">Sales Manager</p>
+                            <p class="card-text">With over a decade of experience in the automotive industry, Josefine is dedicated to helping you find the perfect vehicle to suit your needs.</p>
+                            <p>Email: josefine@example.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/static/nikko.jpg" alt="Person2">
+                        <div class="card-body">
+                            <h5 class="card-title">Niko Berggren</h5>
+                            <p class="card-text">Finance Specialist</p>
+                            <p class="card-text">Niko specializes in providing personalized financing solutions tailored to your budget and preferences.</p>
+                            <p>Email: niko@example.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/static/chris.jpg" alt="Person3">
+                        <div class="card-body">
+                            <h5 class="card-title">Chris Svensson</h5>
+                            <p class="card-text">Customer Relations</p>
+                            <p class="card-text">Chris is committed to ensuring your satisfaction throughout every stage of your car-buying journey.</p>
+                            <p>Email: chris@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>About Us</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li>Address: 123 Main Street, Cityville</li>
+                            <li>Email: info@bestcars.com</li>
+                            <li>Phone: +1234567890</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
+  
   
   <div class="container" style="margin-top: 5%;">
     <div class="row">
       <div class="col-sm-4">
         <div class="card">
-          <img class="card-img-top" src="/static/josefine.jpg" alt="Person1">
-          <div class="card-body">
-            <h5 class="card-title">Josefine Andersson</h5>
-            <p class="card-text">Sales Manager</p>
-            <p class="card-text">With over a decade of experience in the automotive industry, Josefine is dedicated to helping you find the perfect vehicle to suit your needs.</p>
-            <p>Email: josefine@example.com</p>
-          </div>
+          
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="card">
-          <img class="card-img-top" src="/static/nikko.jpg" alt="Person2">
-          <div class="card-body">
-            <h5 class="card-title">Niko Berggren</h5>
-            <p class="card-text">Finance Specialist</p>
-            <p class="card-text">Niko specializes in providing personalized financing solutions tailored to your budget and preferences.</p>
-            <p>Email: niko@example.com</p>
-          </div>
+          
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="card">
-          <img class="card-img-top" src="/static/chris.jpg" alt="Person3">
-          <div class="card-body">
-            <h5 class="card-title">Chris Svensson</h5>
-            <p class="card-text">Customer Relations</p>
-            <p class="card-text">Chris is committed to ensuring your satisfaction throughout every stage of your car-buying journey.</p>
-            <p>Email: chris@example.com</p>
-          </div>
+          
         </div>
       </div>
     </div>

@@ -26,6 +26,10 @@ img{
 .container{
   justify-content: center;
 }
+
+.container-home {
+    flex: content; /* Allow the content to expand to fill the remaining space */
+}
 .details{
   font-size: 20px;
   color: rgb(97, 64, 128);
@@ -51,14 +55,26 @@ img{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  z-index:2;
 }
 
-.banner{
+/* .banner{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex:1
+} */
+
+.banner {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.banner h5 {
+    font-size: 1.5rem;
+    font-size:55px;
 }
 
 .form_panel {
@@ -133,4 +149,154 @@ img{
     background-position: center;
     font-family: Arial, sans-serif;
     color: #fff;
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.nav-item {
+    margin-left: 15px;
+    font-size: 20px;
+    color: #000;
+    align-self: center;
+}
+
+.homepage-card {
+    display: flex;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.home-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+}
+
+
+
+.homepage_links {
+    color: #fff;
+    font-size: larger;
+    margin: 10px;
+    justify-content: flex-end;
+    z-index:1;;
+}
+
+.loginlink {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: flex-end;
+  z-index:1;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    bottom: 0;
+    z-index: 0; /* Ensure footer stays on top */
+    height: 100px;
+}
+
+.footer h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* body for about_us {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+} */
+
+.body-about {
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+    background-image: url('/static/carz.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.body-home {
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/carz.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.navbar-text {
+    color: rgb(221, 1, 1); /* Text color */
+    font-size: 20px; /* Font size */
+    margin-left: auto; /* Align to the right */
+    
+}
+
+.navbar-text .homepage_links {
+    color: rgb(250, 2, 2); /* Link color */
+    margin-left: 20px; /* Spacing between links */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    justify-content: flex-end;
+  z-index:2;
+}
+
+.navbar-text .homepage_links:hover {
+    color: rgb(213, 10, 10); /* Change link color on hover */
+    justify-content: flex-end;
+  z-index:2;
 }
