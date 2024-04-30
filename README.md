@@ -21,3 +21,17 @@ Added user management-related templates, login, logout & register views to the a
 - Add a Logout view to handle logout requests.
 - Add a Registration view to handle Sign-up requests.
 
+## Part 3: Node.js Mongo DB dockerized server
+### Communication with the database
+Wrote back-end services in an Express app and containerized it with Docker.
+-
+### Wrote and tested the following endpoints:
+ 
+ /fetchReviews/dealer/29
+
+/fetchDealers 
+
+/fetchDealer/3
+
+/fetchDealers/Kansas
+
