@@ -11,9 +11,7 @@ img{
   margin-right:5%;
   margin-top: 1%;
   margin-bottom: 1%;
-}
-.row{
-    background-color: rgb(255, 255, 255, 0);
+  color:white;
 }
 .card-title{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -21,6 +19,31 @@ img{
     background: none;
     position:relative;
     z-index: 1;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 15px;
+    color: black;
+    z-index: 1;
+}
+.contact-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: shite;
+    background: none;
+    position:relative;
+    z-index: 1;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.row{
+    background-color: rgb(255, 255, 255, 0);
 }
 
 .row{
@@ -280,7 +303,6 @@ img{
 }
 
 .body-home {
-
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -291,7 +313,7 @@ img{
 }
 
 .navbar-text {
-    color: rgb(221, 1, 1); /* Text color */
+    color: rgb(236, 1, 1); /* Text color */
     font-size: 20px; /* Font size */
     margin-left: auto; /* Align to the right */
     
@@ -311,3 +333,21 @@ img{
     justify-content: flex-end;
   z-index:2;
 }
+/* COntact us page */
+
+.container-card {
+    padding: 100px 0;
+}
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 20px;
+    padding: 20px;
+}
+.contact-info {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+

@@ -112,11 +112,12 @@ img{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/static/carz.jpg');
+    background-image: url('../assets/carz.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
 }
+
 .navitems{
     display: flex;
     flex-direction: row;
@@ -132,6 +133,7 @@ img{
     color: black;
     align-self: center;
   }
+  
 .navbar {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
