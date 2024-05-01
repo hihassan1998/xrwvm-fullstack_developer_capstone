@@ -74,22 +74,6 @@ img{
   margin-top:3%
 }
 
-.navitems{
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  flex: 1;
-  justify-content: flex-start;
-  justify-self: center;
-}
-
-.nav_item{
-  margin-left:15px;
-  font-size: 20px;
-  color: black;
-  align-self: center;
-}
-
 .username{
   font: 30px sans-serif;
   color:black;
@@ -122,4 +106,53 @@ img{
     border-radius:50px;
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
+}
+.body {
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/carz.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.navitems{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    flex: 1;
+    justify-content: flex-start;
+    justify-self: center;
+  }
+  
+.nav_item{
+    margin-left:15px;
+    font-size: 20px;
+    color: black;
+    align-self: center;
+  }
+.navbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ccc;
 }
