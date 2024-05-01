@@ -88,7 +88,9 @@ img{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  z-index:2;
+  position: relative;
+  z-index:1;
+  
 }
 /* 
 .banner{
@@ -241,7 +243,8 @@ img{
     font-size: larger;
     margin: 10px;
     justify-content: flex-end;
-    z-index:1;;
+    position: relative;
+    z-index:1;
 }
 
 .loginlink {
@@ -249,7 +252,8 @@ img{
     flex-direction: row;
     justify-content: flex-end;
     justify-content: flex-end;
-  z-index:1;
+    position: relative;
+    z-index:1;
 }
 
 .footer {
@@ -320,18 +324,18 @@ img{
 }
 
 .navbar-text .homepage_links {
-    color: rgb(250, 2, 2); /* Link color */
+    color: white; /* Link color */
     margin-left: 20px; /* Spacing between links */
     text-decoration: none; /* Remove default underline */
     transition: color 0.3s ease; /* Smooth color transition on hover */
     justify-content: flex-end;
-  z-index:2;
+
 }
 
 .navbar-text .homepage_links:hover {
-    color: rgb(213, 10, 10); /* Change link color on hover */
+    color: rgb(143, 143, 143); /* Change link color on hover */
     justify-content: flex-end;
-  z-index:2;
+
 }
 /* COntact us page */
 

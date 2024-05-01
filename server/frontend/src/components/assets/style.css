@@ -117,7 +117,7 @@ img{
     background-position: center;
     color: #fff;
 }
-
+/* navbar config */
 .navitems{
     display: flex;
     flex-direction: row;
@@ -157,4 +157,24 @@ img{
 
 .navbar-nav .nav-link:hover {
     color: #ccc;
+}
+
+.login-background {
+    background-image: url('../assets/carz.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 50%;
+    margin: auto;
+    padding-top: 100px; /* Adjust as needed */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+}
+
+.login_panel {
+    padding: 20px;
 }
