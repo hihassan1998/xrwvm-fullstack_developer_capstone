@@ -31,13 +31,16 @@ Added user management-related templates, login, logout & register views to the a
 
 ## Part 3: Node.js Mongo DB dockerized server
 ### Communication with the database
-Wrote back-end services in an Express app and containerized it with Docker.
-
+Created a containerized Node.js application that uses MongoDB as a backend to serve API endpoints.
 ### Wrote and tested the following endpoints:
  
  /fetchReviews/dealer/29
 
-/fetchDealers 
+/fetchDealers  
+
+### Visual overview of the json from /fetchDealers endpoint:
+![dealerships](https://github.com/hihassan1998/xrwvm-fullstack_developer_capstone/assets/150392365/1b50c0b0-d181-4f8b-aa86-93872aa588fe)
+
 
 /fetchDealer/3
 
