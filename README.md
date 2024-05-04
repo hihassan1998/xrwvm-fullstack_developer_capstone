@@ -1,7 +1,7 @@
-# Fullstack Car Dealership App
+# Fullstack Car Dealership Application
 Deployed link [here] : xxxx
 
-## Part 1: (Application - Static Pages)
+## Part 1: (Static Pages)
 Crteated home,about us and contact us staticpages and designined with css and bootstrap.
 - Fork the GitHub repo containing the project template.
 - Link to forked repo:
@@ -40,11 +40,12 @@ Wrote and tested the following endpoints:
 /fetchDealer/3
 /fetchDealers/Kansas
 
-### Visual overview of the json from /fetchDealers endpoint:
-![dealerships](https://github.com/hihassan1998/xrwvm-fullstack_developer_capstone/assets/150392365/1b50c0b0-d181-4f8b-aa86-93872aa588fe)
-
-### 3.2 Built CarModel and CarMake Django Models
+### 3.2 CarModel and CarMake Django Models
 Have created the CarModel and CarMake models in my Django app.
 
+### 3.3 Django Proxy Services Of Backend APIs
+Learned how to create proxy services to call the cloud functions in Django, convert their JSON results into Python objects such as CarDealer or DealerReview, and return the objects as a HTTPResonse.
+
+## Part 4: Dynamic Pages
 
 
