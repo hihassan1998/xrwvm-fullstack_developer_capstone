@@ -43,7 +43,7 @@ Wrote and tested the following endpoints:
 ### Visual overview of the json from /fetchDealers endpoint:
 ![dealerships](https://github.com/hihassan1998/xrwvm-fullstack_developer_capstone/assets/150392365/1b50c0b0-d181-4f8b-aa86-93872aa588fe)
 
-### 3.2
+### 3.2 Built CarModel and CarMake Django Models
 Have created the CarModel and CarMake models in my Django app.
 
 
