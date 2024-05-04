@@ -30,19 +30,21 @@ Added user management-related templates, login, logout & register views to the a
 ![login](https://github.com/hihassan1998/xrwvm-fullstack_developer_capstone/assets/150392365/995ea124-2003-4478-bcd7-f757dbf32d07)
 
 ## Part 3: Node.js Mongo DB dockerized server
-### Communication with the database
+### 3.1 Communication with the database
 Created a containerized Node.js application that uses MongoDB as a backend to serve API endpoints.
-### Wrote and tested the following endpoints:
- 
- /fetchReviews/dealer/29
 
+Wrote and tested the following endpoints:
+ 
+/fetchReviews/dealer/29
 /fetchDealers  
+/fetchDealer/3
+/fetchDealers/Kansas
 
 ### Visual overview of the json from /fetchDealers endpoint:
 ![dealerships](https://github.com/hihassan1998/xrwvm-fullstack_developer_capstone/assets/150392365/1b50c0b0-d181-4f8b-aa86-93872aa588fe)
 
+### 3.2
+Have created the CarModel and CarMake models in my Django app.
 
-/fetchDealer/3
 
-/fetchDealers/Kansas
 
