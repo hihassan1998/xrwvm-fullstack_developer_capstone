@@ -9,12 +9,10 @@ import review_icon from "../assets/reviewbutton.png"
 import Header from '../Header/Header';
 
 const Dealer = () => {
-
-
     const [dealer, setDealer] = useState({});
     const [reviews, setReviews] = useState([]);
     const [unreviewed, setUnreviewed] = useState(false);
-    const [postReview, setPostReview] = useState(<></>)
+    const [postReview, setPostReview] = useState(<></>);
 
     let curr_url = window.location.href;
     let root_url = curr_url.substring(0, curr_url.indexOf("dealer"));
@@ -31,10 +29,10 @@ const Dealer = () => {
         const retobj = await res.json();
 
         if (retobj.status === 200) {
-            let dealerobjs = Array.from(retobj.dealer)
-            setDealer(dealerobjs[0])
+            let dealerobjs = Array.from(retobj.dealer);
+            setDealer(dealerobjs[0]);
         }
-    }
+    };
 
     const get_reviews = async () => {
         const res = await fetch(reviews_url, {
@@ -44,28 +42,25 @@ const Dealer = () => {
 
         if (retobj.status === 200) {
             if (retobj.reviews.length > 0) {
-                setReviews(retobj.reviews)
+                setReviews(retobj.reviews);
             } else {
                 setUnreviewed(true);
             }
         }
-    }
+    };
 
     const senti_icon = (sentiment) => {
         let icon = sentiment === "positive" ? positive_icon : sentiment === "negative" ? negative_icon : neutral_icon;
         return icon;
-    }
+    };
 
     useEffect(() => {
         get_dealer();
         get_reviews();
         if (sessionStorage.getItem("username")) {
-            setPostReview(<a href={post_review}><img src={review_icon} style={{ width: '10%', marginLeft: '10px', marginTop: '10px' }} alt='Post Review' /></a>)
-
-
+            setPostReview(<a href={post_review}><img src={review_icon} style={{ width: '10%', marginLeft: '10px', marginTop: '10px' }} alt='Post Review' /></a>);
         }
     }, []);
-
 
     return (
         <div>
@@ -73,24 +68,26 @@ const Dealer = () => {
             <div className="container">
                 <div className="blur-overlay"></div>
                 <div className="content-container">
-                    <h1 style={{ color: "grey" }}>{dealer.full_name}{postReview}</h1>
-                    <h4 style={{ color: "grey" }}>{dealer['city']}, {dealer['address']}, Zip - {dealer['zip']}, {dealer['state']}</h4>
+                    <h1 style={{ color: "white" }}>{dealer.full_name}{postReview}</h1>
+                    <h4 style={{ color: "white" }}>{dealer['city']}, {dealer['address']}, Zip - {dealer['zip']}, {dealer['state']}</h4>
                     <div className="reviews-panel">
                         {reviews.length === 0 && !unreviewed ? (
                             <p>Loading Reviews...</p>
                         ) : unreviewed ? <p>No reviews yet!</p> :
                             reviews.map(review => (
-                                <div key={review.id} className='review-panel'>
-                                    <img src={senti_icon(review.sentiment)} className="emotion-icon" alt='Sentiment' />
-                                    <div className='review'>{review.review}</div>
-                                    <div className="reviewer">{review.name} {review.car_make} {review.car_model} {review.car_year}</div>
+                                <div key={review.id} className='review-card'>
+                                    <div className='review-card-content'>
+                                        <img src={senti_icon(review.sentiment)} className="emotion-icon" alt='Sentiment' />
+                                        <div className='review'>{review.review}</div>
+                                        <div className="reviewer">{review.name} {review.car_make} {review.car_model} {review.car_year}</div>
+                                    </div>
                                 </div>
                             ))}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Dealer
+export default Dealer;

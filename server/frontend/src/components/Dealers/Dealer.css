@@ -1,37 +1,52 @@
+/* Dealer.css */
 .container {
     position: relative;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-}
-
-.blur-overlay {
+  }
+  
+  .blur-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity as needed */
-    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-}
-
-.content-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1; /* Ensure the overlay is behind other content */
+  }
+  
+  .content-container {
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.reviews-panel {
-    margin-top: 20px;
-}
-
-.review-panel {
-    margin-bottom: 20px;
-}
-
-.emotion-icon {
-    width: 20px;
-    height: 20px;
+  }
+  
+  .reviews-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+  
+  .review-card {
+    width: calc(50% - 10px); /* Adjust card width */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+    overflow: hidden;
+  }
+  
+  .review-card-content {
+    padding: 20px;
+  }
+  
+  .review-card img.emotion-icon {
+    width: 30px; /* Adjust icon size */
     margin-right: 10px;
-}
+  }
+  
+  .review-card .review {
+    margin-bottom: 10px;
+  }
+  
+  .review-card .reviewer {
+    font-style: italic;
+    color: #888;
+  }
+  
