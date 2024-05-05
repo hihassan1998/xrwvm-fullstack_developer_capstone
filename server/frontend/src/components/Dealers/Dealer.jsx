@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import "./Dealers.css";
+import "./Dealer.css";
 import "../assets/style.css";
 import positive_icon from "../assets/positive.png"
 import neutral_icon from "../assets/neutral.png"
@@ -68,23 +68,26 @@ const Dealer = () => {
 
 
     return (
-        <div style={{ margin: "20px" }}>
+        <div>
             <Header />
-            <div style={{ marginTop: "10px" }}>
-                <h1 style={{ color: "grey" }}>{dealer.full_name}{postReview}</h1>
-                <h4 style={{ color: "grey" }}>{dealer['city']},{dealer['address']}, Zip - {dealer['zip']}, {dealer['state']} </h4>
-            </div>
-            <div class="reviews_panel">
-                {reviews.length === 0 && unreviewed === false ? (
-                    <text>Loading Reviews....</text>
-                ) : unreviewed === true ? <div>No reviews yet! </div> :
-                    reviews.map(review => (
-                        <div className='review_panel'>
-                            <img src={senti_icon(review.sentiment)} className="emotion_icon" alt='Sentiment' />
-                            <div className='review'>{review.review}</div>
-                            <div className="reviewer">{review.name} {review.car_make} {review.car_model} {review.car_year}</div>
-                        </div>
-                    ))}
+            <div className="container">
+                <div className="blur-overlay"></div>
+                <div className="content-container">
+                    <h1 style={{ color: "grey" }}>{dealer.full_name}{postReview}</h1>
+                    <h4 style={{ color: "grey" }}>{dealer['city']}, {dealer['address']}, Zip - {dealer['zip']}, {dealer['state']}</h4>
+                    <div className="reviews-panel">
+                        {reviews.length === 0 && !unreviewed ? (
+                            <p>Loading Reviews...</p>
+                        ) : unreviewed ? <p>No reviews yet!</p> :
+                            reviews.map(review => (
+                                <div key={review.id} className='review-panel'>
+                                    <img src={senti_icon(review.sentiment)} className="emotion-icon" alt='Sentiment' />
+                                    <div className='review'>{review.review}</div>
+                                    <div className="reviewer">{review.name} {review.car_make} {review.car_model} {review.car_year}</div>
+                                </div>
+                            ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
