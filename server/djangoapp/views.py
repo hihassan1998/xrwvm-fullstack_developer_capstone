@@ -1,8 +1,8 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 # from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
 # from django.shortcuts import get_object_or_404, redirect
-#from django.contrib.auth import logout
+# from django.contrib.auth import logout
 # from django.contrib import messages
 # from datetime import datetime
 
@@ -41,6 +41,7 @@ def login_user(request):
 
 # Creating a `logout_request` view to handle sign out request
 
+
 def logout(request):
     data = {"userName": ""}
     return JsonResponse(data)
@@ -75,14 +76,15 @@ def registration(request):
             )
         # Login the user and redirect to list page
         login(request, user)
-        data = {"userName":username, "status": "Authenticated"}
+        data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
     else :
-        data = {"userName":username, "error": "Already Registered"}
+        data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
 
 # # Updating the 'get_cars' view to get cars make and model
 # list of cars and models
+
 
 def get_cars(request):
     count = CarMake.objects.filter().count()
@@ -94,7 +96,7 @@ def get_cars(request):
     for car_model in car_models:
         cars.append({"CarModel": car_model.name,
                      "CarMake": car_model.car_make.name})
-    return JsonResponse({"CarModels":cars})
+    return JsonResponse({"CarModels": cars})
 
 # Update the `get_dealerships` render list of dealerships all by default,
 # particular state if state is passed
@@ -124,6 +126,7 @@ def get_dealer_reviews(request, dealer_id):
         return JsonResponse({"status": 400, "message": "Bad Request"})
 
 # Creating a `get_dealer_details` view to render the dealer details
+
 def get_dealer_details(request, dealer_id):
     if (dealer_id):
         endpoint = "/fetchDealer/"+str(dealer_id)
@@ -134,13 +137,14 @@ def get_dealer_details(request, dealer_id):
 
 # Creating a `add_review` view to submit a review
 
+
 def add_review(request):
     if (request.user.is_anonymous == False):
         data = json.loads(request.body)
         try:
             response = post_review(data)
             return JsonResponse({"status": 200})
-        except Exception:
-            return JsonResponse({"status": 401, "message": "Error in posting review"})
+        except Exception as e:
+            return JsonResponse({"status": 401, "message": f"Error in posting review {e}"})
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
