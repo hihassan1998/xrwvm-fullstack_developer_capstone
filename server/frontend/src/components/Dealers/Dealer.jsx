@@ -70,6 +70,7 @@ const Dealer = () => {
                 <div className="content-container">
                     <h1 style={{ color: "white" }}>{dealer.full_name}{postReview}</h1>
                     <h4 style={{ color: "white" }}>{dealer['city']}, {dealer['address']}, Zip - {dealer['zip']}, {dealer['state']}</h4>
+                    <a href={`/searchcars/${id}`} className="search-button">SearchCars</a>
                     <div className="reviews-panel">
                         {reviews.length === 0 && !unreviewed ? (
                             <p>Loading Reviews...</p>

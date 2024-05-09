@@ -16,7 +16,7 @@ from .populate import initiate
 from .models import CarMake, CarModel
 
 from .restapis import get_request, analyze_review_sentiments
-from .restapis import get_request, analyze_review_sentiments,post_review
+from .restapis import get_request, analyze_review_sentiments, post_review, searchcars_request
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -151,3 +151,27 @@ def add_review(request):
                 "message": f"Error in posting review {e}"})
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
+# Creating a `get_inventory` view to get a car inventory details
+
+
+def get_inventory(request, dealer_id):
+    data = request.GET
+    if (dealer_id):
+        if 'year' in data:
+            endpoint = "/carsbyyear/"+str(dealer_id)+"/"+data['year']
+        elif 'make' in data:
+            endpoint = "/carsbymake/"+str(dealer_id)+"/"+data['make']
+        elif 'model' in data:
+            endpoint = "/carsbymodel/"+str(dealer_id)+"/"+data['model']
+        elif 'mileage' in data:
+            endpoint = "/carsbymaxmileage/"+str(dealer_id)+"/"+data['mileage']
+        elif 'price' in data:
+            endpoint = "/carsbyprice/"+str(dealer_id)+"/"+data['price']
+        else:
+            endpoint = "/cars/"+str(dealer_id)
+ 
+        cars = searchcars_request(endpoint)
+        return JsonResponse({"status": 200, "cars": cars})
+    else:
+        return JsonResponse({"status": 400, "message": "Bad Request"})
+    return JsonResponse({"status": 400, "message": "Bad Request"})
