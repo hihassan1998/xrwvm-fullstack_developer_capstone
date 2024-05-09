@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import "../assets/style.css";
 import "./PostReview.css";
 import Header from '../Header/Header';
+import "./PostReview.css";
 
 
 const PostReview = () => {

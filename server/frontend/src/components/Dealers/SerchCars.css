@@ -44,7 +44,11 @@
   }
   
   /* Style for headings */
-  h1, h3 {
+  h1{
+    margin-bottom: 10px;
+    color: white;
+  }
+  h3 {
     margin-bottom: 10px;
     color: #007bff;
   }

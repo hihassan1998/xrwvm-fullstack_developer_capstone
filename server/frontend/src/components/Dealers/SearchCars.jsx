@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../Header/Header';
+import "./SerchCars.css";
 
 const SearchCars = () => {
     const [cars, setCars] = useState([]);
@@ -252,8 +253,8 @@ const SearchCars = () => {
                     )
                     }
                 </select>
-                <span style={{ marginLeft: '10px', paddingLeft: '10px' }}>Model</span>
-                <select style={{ marginLeft: '10px', marginRight: '10px', paddingLeft: '10px', borderRadius: '10px' }} name="model" id="model" onChange={SearchCarsByModel}>
+                <span >Model</span>
+                <select name="model" id="model" onChange={SearchCarsByModel}>
                     {models.length === 0 ? (
                         <option value=''>No data found</option>
                     ) : (
@@ -267,8 +268,8 @@ const SearchCars = () => {
                         </>
                     )}
                 </select>
-                <span style={{ marginLeft: '10px', paddingLeft: '10px' }}>Year</span>
-                <select style={{ marginLeft: '10px', marginRight: '10px', paddingLeft: '10px', borderRadius: '10px' }} name="year" id="year" onChange={SearchCarsByYear}>
+                <span >Year</span>
+                <select name="year" id="year" onChange={SearchCarsByYear}>
                     <option selected value='all'> -- All -- </option>
                     <option value='2024'>2024 or newer</option>
                     <option value='2023'>2023 or newer</option>
@@ -276,8 +277,8 @@ const SearchCars = () => {
                     <option value='2021'>2021 or newer</option>
                     <option value='2020'>2020 or newer</option>
                 </select>
-                <span style={{ marginLeft: '10px', paddingLeft: '10px' }}>Mileage</span>
-                <select style={{ marginLeft: '10px', marginRight: '10px', paddingLeft: '10px', borderRadius: '10px' }} name="mileage" id="mileage" onChange={SearchCarsByMileage}>
+                <span >Mileage</span>
+                <select name="mileage" id="mileage" onChange={SearchCarsByMileage}>
                     <option selected value='all'> -- All -- </option>
                     <option value='50000'>Under 50000</option>
                     <option value='100000'>50000 - 100000</option>
@@ -285,8 +286,8 @@ const SearchCars = () => {
                     <option value='200000'>150000 - 200000</option>
                     <option value='200001'>Over 200000</option>
                 </select>
-                <span style={{ marginLeft: '10px', paddingLeft: '10px' }}>Price</span>
-                <select style={{ marginLeft: '10px', marginRight: '10px', paddingLeft: '10px', borderRadius: '10px' }} name="price" id="price" onChange={SearchCarsByPrice}>
+                <span>Price</span>
+                <select name="price" id="price" onChange={SearchCarsByPrice}>
                     <option selected value='all'> -- All -- </option>
                     <option value='20000'>Under 20000</option>
                     <option value='40000'>20000 - 40000</option>
