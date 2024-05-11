@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     'https://hassanishfaq-8000.theiadockernext-0-labs-prod-'
-    'theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    'theiak8s-4-tor01.proxy.cognitiveclass.ai', '127.0.0.1'
     ]
 CSRF_TRUSTED_ORIGINS = [
     'https://hassanishfaq-8000.theiadockernext-0-labs-prod-'
