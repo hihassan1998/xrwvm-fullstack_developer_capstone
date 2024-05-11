@@ -1,52 +1,72 @@
 /* Dealer.css */
 .container {
     position: relative;
-  }
-  
-  .blur-overlay {
+}
+
+.blur-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-    z-index: -1; /* Ensure the overlay is behind other content */
-  }
-  
-  .content-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+    z-index: -1;
+    /* Ensure the overlay is behind other content */
+}
+
+.content-container {
     padding: 20px;
-  }
-  
-  .reviews-panel {
+}
+
+.reviews-panel {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Adjust as needed */
-    gap: 20px; /* Adjust spacing between cards */
-  }
-  
-  .review-card {
-    width: calc(50% - 10px); /* Adjust card width */
+    justify-content: space-between;
+    /* Adjust as needed */
+    gap: 20px;
+    /* Adjust spacing between cards */
+}
+
+.review-card {
+    width: calc(50% - 10px);
+    /* Adjust card width */
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adjust shadow as needed */
     overflow: hidden;
-  }
-  
-  .review-card-content {
+}
+
+.review-card-content {
     padding: 20px;
-  }
-  
-  .review-card img.emotion-icon {
-    width: 30px; /* Adjust icon size */
+}
+
+.review-card img.emotion-icon {
+    width: 30px;
+    /* Adjust icon size */
     margin-right: 10px;
-  }
-  
-  .review-card .review {
+}
+
+.review-card .review {
     margin-bottom: 10px;
-  }
-  
-  .review-card .reviewer {
+}
+
+.review-card .reviewer {
     font-style: italic;
     color: #888;
-  }
-  
+}
+
+.search-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}

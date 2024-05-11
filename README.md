@@ -47,5 +47,15 @@ Have created the CarModel and CarMake models in my Django app.
 Learned how to create proxy services to call the cloud functions in Django, convert their JSON results into Python objects such as CarDealer or DealerReview, and return the objects as a HTTPResonse.
 
 ## Part 4: Dynamic Pages
+Added dynamic pages to the frontend of the app.
+- Built frontend pages to present backend services to end users.
+- Created a component to list the dealerships.
+- Developed a dealer details and reviews component.
+- Created a review submission page
+- 
+## Part 5: Continuous Integration and Continuous Deployment (CI/CD)
+Added a linting service to this application. As a result, all new code will automatically get checked for syntax errors, and this will ensure all developers are following the team coding guidelines.
+
+## Part 6: Deploy app 
 
 
